@@ -1,0 +1,22 @@
+name: Push
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
+      - name: Run tests
+        run: make dokcer-test
+        
+      - name: Build and push
+        run: |
+          docker-compose -f docker-compose.yml build app
+          docker-compose -f docker-compose.yml push app
