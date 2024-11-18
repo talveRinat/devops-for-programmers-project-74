@@ -12,13 +12,13 @@
 # Setup & Running
 ```bash
 # Install dependencies
-make setup
+make docker-setup
 
 # Run development server
-make dev
+make docker-dev
 
 # Run tests
-make test
+make docker-test
 ```
 
 # Docker Image
