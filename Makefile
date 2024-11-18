@@ -6,3 +6,6 @@ docker-test:
 
 docker-dev:
 	docker-compose up
+
+docker-run:
+	docker run -p 8080:8080 -e NODE_ENV=development rrinatmahmutt/devops-for-programmers-project-74 make dev

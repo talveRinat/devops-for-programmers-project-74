@@ -1,7 +1,8 @@
 version: '3'
 services:
   app:
-    build: .
-    volumes:
-      - ./app:/app
+    image: rrinatmahmutt/devops-for-programmers-project-74
+    build:
+      context: .
+      dockerfile: Dockerfile.production
     command: make test
