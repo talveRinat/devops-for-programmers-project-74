@@ -2,7 +2,10 @@ version: '3'
 services:
   app:
     image: rrinatmahmutt/devops-for-programmers-project-74
+    platform: linux/amd64
     build:
       context: .
       dockerfile: Dockerfile.production
+      platforms:
+        - linux/amd64
     command: make test
