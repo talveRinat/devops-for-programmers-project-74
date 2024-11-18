@@ -6,6 +6,8 @@ services:
       db:
         condition: service_healthy
     command: make test
+    networks:
+      - app-network
 
   db:
     image: postgres:latest
@@ -17,4 +19,9 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    networks:
+      - app-network
     
+networks:
+  app-network:
+    driver: bridge
