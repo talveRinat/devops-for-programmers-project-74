@@ -11,4 +11,4 @@ copy-env:
 	cp -n .env.example .env
 
 ci: copy-env
-	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from
+	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
