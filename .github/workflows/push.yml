@@ -20,7 +20,7 @@ jobs:
 
       - name: Check
         run: |
-          make ci
+          make docker-ci
 
       - name: Build and push
         uses: docker/build-push-action@v4
