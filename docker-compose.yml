@@ -14,7 +14,7 @@ services:
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-    command: make ci
+    command: make test
 
   db:
     image: postgres:latest
