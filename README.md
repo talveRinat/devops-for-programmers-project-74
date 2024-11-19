@@ -5,9 +5,9 @@
 
 
 # Requirements:
-- Docker
-- Docker Compose
-- Make
+- Docker == 24.0.6
+- Docker Compose == 2.22.0
+- Make == 3.81
 
 # Setup & Running
 ```bash
