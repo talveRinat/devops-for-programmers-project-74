@@ -23,3 +23,17 @@ make docker-test
 
 # Docker Image
 Docker Hub: rrinatmahmutt/devops-for-programmers-project-74
+
+
+# Структура
+```
+.
+├── app                            -- веб сервис
+├── services                       -- файл конфигурации Caddy
+├── Dockerfile                     -- Основной докер образ приложение  
+├── Dockerfile.production          -- Prod-ready образ приложения
+├── Makefile                       -- Команды для удобства вызова
+├── README.md
+├── docker-compose.override.yml    -- Дополнительная конфигурация локальной разработки
+└── docker-compose.yml             -- Основная конфигурация для тестирования продакшен-сборки
+```
